@@ -12,7 +12,7 @@ class App extends Component {
         <Text>Hello, Programado!!!</Text>
         <Text>Hello, Grana Dura de se ganhar!</Text>
         <Text style={{ color: "white", fontSize: 32, margin: 25 }}>Hello, Futuro!!!</Text>
-        <Jobs largura={550} altura={350}/>
+        <Jobs largura={250} altura={250} referencia="Foto vindo do react img"/>
       </View>
 
     )
@@ -23,7 +23,11 @@ class Jobs extends Component {
   render() {
      let foto = "https://reactnative.dev/docs/assets/p_cat2.png"
     return (
-      <Image source={ {uri: foto}} style={{ width: this.props.altura, height: this.props.largura }} />
+      <View>
+        <Image source={ {uri: foto}} style={{ width: this.props.altura, height: this.props.largura }} />
+        <Text style={{ fontSize: 28, marginBottom: 15 }}>Trabalhos</Text>
+        <Text>{this.props.referencia}</Text>
+      </View>
     )
   }
 }
