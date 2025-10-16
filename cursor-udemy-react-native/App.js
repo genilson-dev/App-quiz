@@ -24,21 +24,27 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#1e2e3e",
     borderRadius: 5,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
     
    
   },
   app:{
-    height: 65,
+    width:50,
+    height: 50,
     backgroundColor:"#00ff37ff", 
     
   },
   app1:{
-      flex: 1,
+      width:50,
+      height: 50,
       backgroundColor:"#fbff00ff", 
 
   },
     app2:{
-    height: 65,
+    width:50,
+    height: 50,
     backgroundColor:"#00ff37ff", 
   }
 
