@@ -11,7 +11,7 @@ class App extends Component {
         <Text style={styles.texte2}>Texte 02</Text>
         <Text style={styles.texte3}>Texte 03</Text>
         <Text style={styles.texte4}>Texte 04</Text>
-        <Text>Texte 05</Text>
+        <Text style={[styles.texte4, styles.texte5]}>Texte 05:</Text>
 
       </View>
 
@@ -27,11 +27,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'green',
-    margin: 10
+    backgroundColor: 'cyan',
+    margin: 1
   },
   texte1:{color:'red', fontSize:20},
   texte2:{color:'blue', fontSize:25},
   texte3:{color:'yellow', fontSize:30},
-  texte4:{color:'purple', fontSize:35},
+  texte4:{color:'purple', fontSize:35, borderBlockEndColor:'black', borderWidth:6, padding:2},
+  texte5:{color: "whi", borderBlockEndColor:'black', borderWidth:6, padding:2, backgroundColor:'yellow' }
 })
