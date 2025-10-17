@@ -6,17 +6,23 @@ class App extends Component {
     super(props);
     this.state = {
       nome: '',
+      input: ''
     };
-    this.pagaNome = this.pagaNome.bind(this);
+    
+    this.entrar = this.entrar.bind(this);
   }
 
-  pagaNome(texto){
-    if (texto.length > 0){
-      // texto = texto.charAt(0).toUpperCase() + texto.slice(1).toLowerCase();
-      this.setState({nome: "Bem Vindo(a): "+ texto})
-    }else{
-      this.setState({nome: ''})
+
+  entrar(){
+    if(this.state.input === ""){
+      alert("Por favor, digite seu nome!");
+      return;
     }
+    if(this.state.input.length < 3){
+      alert("Nome muito curto!");
+      return;
+    }
+    this.setState({nome: "Bem Vindo(a): " + this.state.input})
   }
 
   render() {
@@ -28,8 +34,12 @@ class App extends Component {
           placeholder="Digite seu nome"
           placeholderTextColor="#ccc" 
           underlineColorAndroid="transparent" 
-          onChangeText={this.pagaNome}
-          
+          onChangeText={(texto) => this.setState({input: texto})}          
+        />
+        <Button 
+          title="Clique aqui" 
+          onPress={this.entrar} 
+          color="#f43f5e"
         />
         <Text style={styles.texto}> {this.state.nome}</Text>
 
